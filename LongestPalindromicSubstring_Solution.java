@@ -10,7 +10,8 @@ class Solution {
         return ret;
     }
     public int helper(String str, int s, int e) {
-        if(s<0 || e>=str.length()) return 0;
+        // if(s<0 || e>=str.length()) return 0;
+        if(e>=str.length()) return 0;
         while(s>=0 && e<str.length() && str.charAt(s)==str.charAt(e)) {
             s--;
             e++;
