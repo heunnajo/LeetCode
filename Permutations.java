@@ -35,7 +35,7 @@ class Solution {
         nums[j] = tmp;
         
         j = len-1;
-        while(i<j){//등호가 없어도 되나?!!!!!
+        while(i<j){//등호가 없어도 됨
             tmp = nums[i];
             nums[i] = nums[j];
             nums[j] = tmp;
