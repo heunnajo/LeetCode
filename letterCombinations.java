@@ -12,14 +12,15 @@ class Solution {
         n = digits.length();
         Digits = digits;
         
-        go(0,"");
+        
+        go(0,new StringBuilder());
         
         return list;
     }
-    void go(int idx,String selected){
+    void go(int idx,StringBuilder selected){
         //1.재귀 종료
         if(idx == n){
-            list.add(selected);
+            list.add(selected.toString());
             return;
         }
         
@@ -27,7 +28,10 @@ class Solution {
         String cur = map[Digits.charAt(idx)-'0'];
         int k = cur.length();
         for(int i=0;i<k;i++){
-            go(idx+1,selected+cur.charAt(i));
+            selected.append(cur.charAt(i));
+            go(idx+1,selected);
+            selected.deleteCharAt(selected.length()-1);
+            
         }
     }
 }
