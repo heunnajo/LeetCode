@@ -1,5 +1,5 @@
 import java.util.*;
-public class FindEventualSafeStates {
+public class Solution {
 
     public List<Integer> eventualSafeNodes(int[][] graph) {
         //0. adjacent node info
@@ -21,7 +21,6 @@ public class FindEventualSafeStates {
             for(int x:tmList){
                 if(adj[i][x] == 1 ){ans.add(i);}
             }
-            
         }
         for(int x:tmList){
             ans.add(x);
